@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet"/>
+    <style>
+        .menu
+        {
+        min-height:35px;
+
+        }
+        .silder
+        {
+        min-height:500px;
+        border:25px;
+        }
+        .CWPD
+        {
+        min-height:500px;
+        background:navy;
+        }
+        .ufooter
+        {
+        min-height:500px;
+        }
+        .footer
+        {
+        min-height:35px;
+        background:black;
+        }
+        .newnoti
+        {
+        max-height:100px
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container fluid outer">
+    <div class="row header py-3">
+        <div class="col-sm-4 border border-end bg-primary text-white px-2">
+            Date:2021/01/01 Day:Sunday
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 border border-end bg-primary">
+            <i class="fa fa-instagram bg-info" style="color:red;"> <b style="color:white;"> @samachar_india </b></i>
+            <i class="fa fa-youtube bg-info" style="color:red;"> <b style="color:white;">Samachar India 24X4 </b></i>
+        </div>
+    </div>
+    <div class="row header py-3">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3 fs-3">
+            Samachar<b style="color:blue;"> India <i class="fa fa-globe"></i></b>
+        </div>
+        <div class="col-sm-7"></div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row menu py-3">
+        <div class="col-sm-2 "></div>
+        <div class="col-sm-8 bg-info">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/user
+
+
+
+
+
+
+"><i class="fa fa-home" style="color:white;"></i>Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/aboutus"><i class="fa fa-address-card "
+                                                                            style="color:white;"></i>About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/viewnews"><i class="fa fa-eye" style="color:white;"></i>
+                                    <i class="fa fa-newspaper-o" style="color:white;"></i>View News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/videos"><i class="fa fa-play" style="color:white;"></i>Videos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/contactus"><i class="fa fa-id-badge "
+                                                                              style="color:white;"></i>Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin"><i class="fa fa-sign-in" style="color:white;"></i>Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    {% block content %}
+    {% endblock %}
+
+    <div class="row ufooter">
+        <div class="col-sm-4 p-2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3558.2197579207495!2d80.95708101488279!3d26.896519883134598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1633410871208!5m2!1sen!2sin"
+                    width="400" height="500" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="col-sm-4">
+            <div class="h3 text-center bg-info text-white">NEWS Portal</div>
+            <p class="fs-3" style="font-family:Monotype Corsiva">In descriptive writing, the author does not just tell the reader what was seen, felt, tested, smelled, or
+                heard. Rather, the author describes something from their own experience and, through careful choice of
+                words and phrasing, makes it seem real. Descriptive writing is vivid, colorful, and detailed.</p>
+        </div>
+        <div class="col-sm-4">
+            <div class="h2">Other Platforms</div>
+            <div class="h4">Contact Us</div>
+            <i class="fa fa-phone py-5 fs-4"> +91 7068443388 </i></br>
+            <i class="fa fa-instagram fs-4"> @samachar_india </i></br>
+            <i class="fa fa-facebook fs-4"> Samachar India </i></br>
+            <i class="fa fa-youtube fs-4"> Samachar India 24X7 </i></br>
+        </div>
+
+    </div>
+    <div class="row footer">
+        <div class="col-sm-4 text-center text-white">
+            @copyright
+        </div>
+        <div class="col-sm-4 text-center text-white">
+            delovped by: Mr.XYZ
+        </div>
+        <div class="col-sm-4 text-center text-white">
+            viseron:12.312.5
+        </div>
+    </div>
+</div>
+</body>
+</html>

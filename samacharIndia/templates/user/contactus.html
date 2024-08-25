@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+<style>
+.form-control
+{
+margin-bottom:8px;
+}
+
+</style>
+{% block content %}
+<div class="row">
+<div class="h2 text-center">contact<b style="color:navy; "> us <i class="fa fa-phone"></i></b></div>
+<div class="col-sm-1"></div>
+<div class="col-sm-10 bg-light">
+<div class="row">
+<div class="col-sm-7">
+ <img src="{% static 'images/p3.jpg' %}" style="height:400px;width:450px;"/>
+</div>
+<div class="col-sm-5 py-5">
+<!---{{A}}<br/>
+{{B}}<br/>
+{{C}}<br/>---->
+
+<form method="post" autocomplete="off" enctype="multipart/form-data">
+{% csrf_token %}
+ {% if S %}
+ <div class="alert alert-success p-3">
+      thanks for enquiry...
+
+
+</div>
+ {% endif %}
+Name<input type="text"  placeholder ="enter your name" class="form-control" name="name"/>
+Email<input type="email"  placeholder ="enter your email" class="form-control" name="email"/>
+Mobile No<input type="text"  placeholder ="enter your mobile no" class="form-control" name="mobile"/>
+Message<textarea class="form-control" name="msg"></textarea>
+<input type="submit" value="save" class="btn btn-info text-white"/>
+</form>
+
+</div>
+</div>
+</div>
+<div class="col-sm-1"></div>
+</div>
+{% endblock %}

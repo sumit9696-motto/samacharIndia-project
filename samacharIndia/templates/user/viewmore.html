@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+<div class="h2 text-center">Description <b class="text-primary">of news</b> </div>
+    <div class="col-sm-1"></div>
+    {% if desnews %}
+    {% for x in desnews %}
+    <div class="col-sm-10 bg-light p-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="{{x.newspic}}" class="img-thumbnail w-100"/>
+            </div>
+
+            <div class="col-sm-8">
+                <div class="h2">{{x.ncategory}}</div>
+                <p class="btn btn-drak">{{x.headlines}}</p>
+                <b>{{x.subject}}</b>
+                <b>{{x.newsdes}}</b>
+                <i class="btn btn-outline-warning">posted on:{{x.ndate}}</i>
+                <i class="btn btn-outline-warning">city:{{x.city}}</i>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="col-sm-1"></div>
+</div>
+{% endblock %}

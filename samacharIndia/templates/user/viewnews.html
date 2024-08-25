@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row news page">
+    <div class="h1 text-center">NEWS</div>
+    <div class="col-sm-3 news list">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                News Category List
+            </a>
+            {% if c %}
+            {% for x in c %}
+            <a href="/user/viewnews?abc={{x.id}}" class="list-group-item list-group-item-action">{{x.cname}}</a>
+            {% endfor %}
+            {% endif %}
+
+        </div>
+    </div>
+    <div class="col-sm-9 newsgroup">
+        <div class="row world ">
+            {% if n %}
+            {% for a in n %}
+            <div class="col-sm-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="/{{a.newspic}}" class="card-img-top" alt="...">
+                    <div class="card-body bg-light">
+                        <h5 class="card-text">{{a.ncategory}}</h5>
+                        <p class="card-title h4">{{a.headlines}}</p>
+                        <p class="card-text fw-bolder">{{a.subject}}</p>
+                        <p class="card-text">{{a.newsdes}}</p>
+                        <p class="card-text"><small class="text-muted">Date : {{a.ndate}} || City:{{a.city}} </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
